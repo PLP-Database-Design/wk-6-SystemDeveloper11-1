@@ -53,3 +53,42 @@ test("submits form correctly with valid input", () => {
 
   expect(screen.getByText(/request submitted successfully/i)).toBeInTheDocument();
 });
+### Manual Testing Workflow
+- Open the application on Chrome or mobile emulator.
+- Navigate through all pages: Home, Dashboard, Feedback, Awareness, Admin Panel.
+- Perform the following:
+  - Submit forms with empty and valid data.
+  - Apply filters and sort tables on Dashboard.
+  - Update request status in Admin Panel.
+  - Submit feedback with valid Request IDs.
+  - Test long input text to observe layout behavior.
+  - Check responsive behavior on different screen sizes.
+  - Inspect accessibility using DevTools and screen readers.
+
+### Automated Test Scripts (React Testing Library)
+
+```javascript
+import { render, screen, fireEvent } from "@testing-library/react";
+import App from "../App";
+
+// Test 1: Submit empty form should show validation errors
+test("shows error when submitting empty form", () => {
+  render(<App />);
+  const submitButton = screen.getByText(/submit/i);
+  fireEvent.click(submitButton);
+  expect(screen.getByText(/please fill all fields/i)).toBeInTheDocument();
+});
+
+// Test 2: Submit form with valid inputs
+test("submits form correctly with valid input", () => {
+  render(<App />);
+  const nameInput = screen.getByLabelText(/name/i);
+  const locationInput = screen.getByLabelText(/location/i);
+  const submitButton = screen.getByText(/submit/i);
+
+  fireEvent.change(nameInput, { target: { value: "John Doe" } });
+  fireEvent.change(locationInput, { target: { value: "Nairobi" } });
+  fireEvent.click(submitButton);
+
+  expect(screen.getByText(/request submitted successfully/i)).toBeInTheDocument();
+});
