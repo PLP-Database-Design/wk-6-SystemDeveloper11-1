@@ -3,7 +3,7 @@
 ## Manual Test Cases
 | Test ID | Description | Steps | Expected Result | Actual Result | Status |
 |---------|-------------|-------|----------------|---------------|--------|
-| TC001 | Submit empty waste pickup form | Go to Home → leave all fields empty → Click Submit | Validation errors should appear for all required fields | works as expected | Closed |
+| TC001 | Submit empty waste pickup form | Go to Home → leave all fields empty → Click Submit | Validation errors should appear for all required fields | works as expected |Pass Closed |
 | TC002 | Submit valid waste pickup form | Fill all required fields correctly → Click Submit | Form submitted successfully → Success message displayed | partially | open |
 | TC003 | Filter requests by location | Open Dashboard → Apply filter “Eldoret” | Only Eldoret requests displayed |  |  |
 | TC004 | Update request status in Admin Panel | Open Admin Panel → Click "Mark as Scheduled" | UI should update immediately |  |  |
@@ -27,19 +27,25 @@
 | TC022 | Attempt to submit duplicate request | Fill form with same details as an existing request → Submit | System prevents duplicate submission |  |  |
 | TC023 | User without admin rights tries to update status | Login as normal user → Attempt to mark request as Scheduled | Action denied; error message displayed |  |  |
 | TC024 | Notification on status change | Admin updates request → Scheduled/Completed | User receives notification (email/in-app) |  |  |
-| TC025 | File upload with unsupported format | Upload .exe or unsupported file → Submit | Validation error displayed; only images accepted |  |  |
-| TC026 | File upload exceeding size limit | Upload image > 5MB → Submit | Validation error displayed; file not accepted |  |  |
-| TC027 | Session timeout | Remain idle for 15+ minutes → Try action | Session expires; user redirected to login |  |  |
-| TC028 | Search with invalid characters | Enter special characters in search → Submit | Error message or no results displayed |  |  |
-| TC029 | Bulk deletion confirmation | Select multiple requests → Delete → Confirm | Only requests confirmed are deleted; system warns before deletion |  |  |
-| TC030 | Dashboard refresh after update | Update a request → Refresh Dashboard | Updated request reflects new status |  |  |
-| TC031 | Logout during active form submission | Fill form partially → Click Logout | Session ends, unsaved data warning displayed |  |  |
-| TC032 | Accessibility: screen reader | Navigate app with screen reader | All interactive elements are announced correctly |  |  |
-| TC033 | Check error messages consistency | Trigger multiple validation errors | All messages clear, consistent, and visible |  |  |
-| TC034 | Role-based feature visibility | Login as different roles → View Admin Panel | Only authorized users see admin features |  |  |
-| TC035 | Responsive layout edge case | Open app on very small screen (e.g., 320px width) | Layout still readable, no overlap or hidden elements |  |  |
-|  |   |   |   |   |    |
+| TC024 | User notifications not received on status change | 1. Login as a normal user → 2. Monitor the Dashboard after a request status is updated in the system | User should receive an in-app notification when request status changes | No notification appears in the Dashboard | ❌ Fail |
+| TC025 | File upload option missing in Feedback section | Open Feedback page → Look for file upload button | User should see “Attach File” or “Upload” option | No file upload feature available | ❌ Fail |
+| TC026 | No option available to change profile picture | Open Profile page → Look for edit profile picture option | User sees “Change Profile Picture” / “Upload Photo” button | No option exists; user cannot change picture | ❌Fail |
+| TC027 | Session timeout | Remain idle for 15+ minutes → Try action | Session expires; user redirected to login |  | Open ,❌ Fail  |
+| TC028 | Search with invalid characters | Login as Admin → Go to Dashboard → Enter invalid characters (#$%^&*) in search → Submit | System should reject invalid characters or show validation error | Test blocked – search field not visible without admin access | ❌ Blocked |
+| TC029 | Bulk deletion confirmation | Select multiple requests → Delete → Confirm | Only requests confirmed are deleted; system warns before deletion |  | - |
+| TC030 | Dashboard refresh after update | Update a Schedule request → Refresh Dashboard | Updated request reflects new status | The Dashboard still shows the old status that is zero. |❌ Fail |
+| TC031 | Logout during active form submission | Fill form partially → Click Logout | Session ends, unsaved data warning displayed |  | ❌ Fail  |
+| TC032 | Accessibility: screen reader | Navigate app with screen reader | All interactive elements are announced correctly | works as expected | Pass |
+| TC033 | Check error messages consistency | Trigger multiple validation errors | All messages clear, consistent, and visible |  | - |
+| TC034 | Role-based feature visibility | Login as different roles → View Admin Panel | Only authorized users see admin features | - | N|A |
+| TC035 | Responsive layout edge case | Open app on very small screen (e.g., 200 - 320px width) | Layout still readable, no overlap or hidden elements |  | ❌ Fail |
+| TC036 | Login with invalid password | Open login page → Enter valid email → Enter wrong password → Click Login | System should display error “Invalid username or password” and prevent login | System allows login :No error shown | ❌ Fail |
+| TC037 | Schedule requests disappear from dashboard analytics | Schedule a pickup and check Dashboard analytic counters  | Counters reflect the new request | Counters remain unchanged | ❌Fail |
+| TC038 | User receives confirmation notification on request pickup schedule | Submit a schedule request ,Check notifications in Dashboard or email message | User receives in-app notification or email trigured message when request is scheduled | No notifications appear in Dashboard or email | ❌ Fail |
 
+|  |   |   |   |   |    |
+| TC026 | File upload exceeding size limit | Upload image > 5MB → Submit | Validation error displayed; file not accepted |  |  |
+| TC025 | File upload with unsupported format | Upload .exe or unsupported file → Submit | Validation error displayed; only images accepted |  |  |
 ---
 
 ## Checklists
