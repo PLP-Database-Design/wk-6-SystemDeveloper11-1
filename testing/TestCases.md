@@ -1,7 +1,7 @@
 # Phase 2 - Test Cases and Checklists
 
 ## Manual Test Cases
-| Test ID | Description | Steps | Expected Result | Actual Result | Status |
+| Test ID | Description | Steps | Expected Result | Actual Result | Status | 
 |---------|-------------|-------|----------------|---------------|--------|
 | TC001 | Submit empty waste pickup form | Go to Home → leave all fields empty → Click Submit | Validation errors should appear for all required fields| works as expected |✅Pass Closed|
 | TC002 | Submit valid waste pickup form | Fill all required fields correctly → Click Submit | Form submitted successfully → Success message displayed | Form submits but no success message displayed | ❌ Fail, Open |
