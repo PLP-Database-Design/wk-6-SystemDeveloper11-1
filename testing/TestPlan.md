@@ -118,4 +118,4 @@ The objectives of this QA process are to:
 |------|------|------------|------|
 |Brian Mbaka | QA Manager |Bm  |11 Nov 2025  |
 |Denis Kiptum | QA Analyst |Dk  |11 Nov 2025  |
-|Wilson Ndinya | Test Executor | Wn |11 Nov 2025  |
+
