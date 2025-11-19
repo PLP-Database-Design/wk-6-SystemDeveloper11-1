@@ -4,12 +4,12 @@
 | Test ID | Description | Steps | Expected Result | Actual Result | Status |
 |---------|-------------|-------|----------------|---------------|--------|
 | TC001 | Submit empty waste pickup form | Go to Home → leave all fields empty → Click Submit | Validation errors should appear for all required fields| works as expected |✅Pass Closed|
-| TC002 | Submit valid waste pickup form | Fill all required fields correctly → Click Submit | Form submitted successfully → Success message displayed | partially | open |
-| TC003 | Filter requests by location | Open Dashboard → Apply filter “Eldoret” | Only Eldoret requests displayed |partially  | ✅Pass |
-| TC004 | Update request status in Admin Panel | Open Admin Panel → Click "Mark as Scheduled" | UI should update immediately |⚠️Blocked ; it requires Admin access mode  | N/A |
-| TC005 | Enter long text input | Enter 500+ characters in form fields → Submit | Layout should handle gracefully |works as expected | Pass|
-| TC006 | Responsive design | Resize browser or open on mobile emulator | Layout adjusts correctly for all screen sizes with no overlaps |  | 🚀TC 35 :REplaced  |
-| TC007 | Feedback submission with valid Request ID | Go to Feedback page → Enter valid Request ID → Submit | Success message displayed |  |  |
+| TC002 | Submit valid waste pickup form | Fill all required fields correctly → Click Submit | Form submitted successfully → Success message displayed | Form submits but no success message displayed | ❌ Fail, Open |
+| TC003 | Filter requests by location | Open Dashboard → Apply filter “Eldoret” | Only Eldoret requests displayed | Cannot test — filter option not available | ⚠️ Blocked |
+| TC004 | Update request status in Admin Panel | Open Admin Panel → Click "Mark as Scheduled" | UI should update immediately | ⚠️ Blocked — requires Admin access | N/A |
+| TC005 | Enter long text input | Enter 500+ characters in form fields → Submit | Layout should handle gracefully | Works as expected | ✔️ Pass |
+| TC006 | Responsive design | Resize browser or open on mobile emulator | Layout adjusts correctly for all screen sizes with no overlaps | Replaced by TC-035 | 🚀🚀Replaced  |
+| TC007 | Feedback submission with valid Request ID | Go to Feedback page → Enter a valid Request ID → Enter feedback → Submit | Success message displayed |submitted successfully| ✔️ Pass |
 | TC008 | Submit form with invalid email | Go to Schedule Pickup page → Fill all fields → Enter invalid email → Submit | Validation error for email field | Form accepts partially invalid emails like user@com which is not technically valid| due to insufficience , ❌ Fai| Open |
 | TC009 | Submit form with invalid phone number | Enter invalid phone format → Submit | Validation error for phone number | Cannot test — phone number field not available in form |Not Testable |
 | TC010 | Filter requests by status | Open Dashboard → Filter by “Scheduled” | Only requests with “Scheduled” status displayed | Cannot test — no requests visible | ❌Blocked |
