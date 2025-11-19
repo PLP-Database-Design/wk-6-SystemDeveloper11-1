@@ -72,7 +72,7 @@ The objectives of this QA process are to:
 |------|---------|------------------|
 | **Manager** |Brian Mbaka | Approves test plan, ensures resource allocation |
 | **Analyst** |Denis Kiptum | Designs test cases and identifies defects |
-| **Executor** |Nelson Ndinya | Runs manual and automated tests, documents results |
+| **Executor** | | Runs manual and automated tests, documents results |
 
 ---
 
@@ -118,4 +118,5 @@ The objectives of this QA process are to:
 |------|------|------------|------|
 |Brian Mbaka | QA Manager |Bm  |11 Nov 2025  |
 |Denis Kiptum | QA Analyst |Dk  |11 Nov 2025  |
+| |QA Executor |  |11 Nov 2025  |
 
