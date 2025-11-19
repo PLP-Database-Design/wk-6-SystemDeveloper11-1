@@ -42,11 +42,6 @@
 | TC037 | Schedule requests disappear from dashboard analytics | Schedule a pickup and check Dashboard analytic counters  | Counters reflect the new request | Counters remain unchanged | ❌Fail |
 | TC038 | User receives confirmation notification on request pickup schedule | Submit a schedule request ,Check notifications in Dashboard or email message | User receives in-app notification or email trigured message when request is scheduled | No notifications appear in Dashboard or email | ❌ Fail |
 
-|  |   |   |   |   |    |
-| TC026 | File upload exceeding size limit | Upload image > 5MB → Submit | Validation error displayed; file not accepted |  |  |
-| TC025 | File upload with unsupported format | Upload .exe or unsupported file → Submit | Validation error displayed; only images accepted |  |  |
----
-
 ## Checklists
 
 - [ ] Home Page loads correctly
