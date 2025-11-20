@@ -237,7 +237,7 @@ Automated tests validated basic form behavior:
 
 ### Appendix A — Pitch Deck Link
 
-Pitch Deck: [https://github.com/PLP-Database-Design/wk-6-SystemDeveloper11-1/pull/22]
+Pitch Deck: [https://drive.google.com/file/d/1F_9AJvLPo5N_51aRLRNeHIf4RmzidQmf/view?usp=sharing]
 
 ### Appendix B — Test Plan
 
