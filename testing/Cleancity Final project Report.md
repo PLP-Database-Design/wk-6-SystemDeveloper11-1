@@ -1,6 +1,7 @@
 # CleanCity Software Testing Report
 
 **Group Name:** The Bug Hunters
+
 **Report Date:** Nov 19, 2025
 
 ## 1. Project Overview
